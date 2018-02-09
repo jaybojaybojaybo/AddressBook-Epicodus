@@ -17,7 +17,7 @@ namespace AddressBook.Models
       _id = _instances.Count;
     }
 
-    public string GetName();
+    public string GetName()
     {
       return _name;
     }

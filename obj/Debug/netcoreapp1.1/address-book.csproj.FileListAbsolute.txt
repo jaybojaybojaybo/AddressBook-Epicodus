@@ -1,0 +1,9 @@
+C:\Users\Jasun\desktop\AddressBook-Epicodus\bin\Debug\netcoreapp1.1\address-book.deps.json
+C:\Users\Jasun\desktop\AddressBook-Epicodus\bin\Debug\netcoreapp1.1\address-book.runtimeconfig.json
+C:\Users\Jasun\desktop\AddressBook-Epicodus\bin\Debug\netcoreapp1.1\address-book.runtimeconfig.dev.json
+C:\Users\Jasun\desktop\AddressBook-Epicodus\obj\Debug\netcoreapp1.1\address-book.csproj.CoreCompileInputs.cache
+C:\Users\Jasun\desktop\AddressBook-Epicodus\obj\Debug\netcoreapp1.1\address-book.AssemblyInfo.cs
+C:\Users\Jasun\desktop\AddressBook-Epicodus\bin\Debug\netcoreapp1.1\address-book.dll
+C:\Users\Jasun\desktop\AddressBook-Epicodus\bin\Debug\netcoreapp1.1\address-book.pdb
+C:\Users\Jasun\desktop\AddressBook-Epicodus\obj\Debug\netcoreapp1.1\address-book.dll
+C:\Users\Jasun\desktop\AddressBook-Epicodus\obj\Debug\netcoreapp1.1\address-book.pdb

@@ -7,6 +7,31 @@ namespace AddressBook.Controllers
 {
   public class ContactsController : Controller
   {
-    
+    [HttpGet("/contacts")]
+    public ActionResult Index()
+    {
+      List<Contact> allContacts = Contact.GetAll();
+      return View("~/Views/Home/Index.cshtml", allContacts);
+    }
+
+    [HttpGet("/contacts/new")]
+    public ActionResult CreateForm()
+    {
+      return View();
+    }
+
+    [HttpPost("/contacts")]
+    public ActionResult Create()
+    {
+      Contact newContact = new Contact(Request.Form["contactName"]);
+      List<Contact> allContacts = Contact.GetAll();
+      return View("~/Views/Home/Index.cshtml", allContacts);
+    }
+
+    [HttpGet("/contacts/{id}")]
+    public ActionResult Details()
+    {
+      return View();
+    }
   }
 }
