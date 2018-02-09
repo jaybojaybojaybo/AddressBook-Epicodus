@@ -33,9 +33,10 @@ namespace AddressBook.Controllers
     }
 
     [HttpGet("/contacts/{id}")]
-    public ActionResult Details()
+    public ActionResult Details(int id)
     {
-      return View();
+      Contact newContact = Contact.Find(id);
+      return View(newContact);
     }
   }
 }
