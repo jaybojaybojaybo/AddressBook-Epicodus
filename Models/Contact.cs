@@ -67,5 +67,15 @@ namespace AddressBook.Models
     {
       _instances.Clear();
     }
+
+    public void ClearContact(int id)
+    {
+      _instances.RemoveAt(id);
+      for (int i = 0; i < _instances.Count; i++)
+      {
+        _instances[i]._id = (i += 1);
+      }
+    }
+
   }
 }

@@ -34,8 +34,11 @@
     <div class="inner">
       <h3><a href="/">Back to All Contacts</a></h3>
       <h3><a href="/contacts/new">Add a new Contact</a></h3>
+      <form action="/remove/@Model.GetId()" method="post">
+        <button type="submit" name="button">Remove @Model.GetName() from Contacts</button>
+      </form>
       <form action="/contacts/List/Clear" method="post">
-        <button type="submt" name="button">Clear All Contacts</button>
+        <button type="submit" name="button">Clear All Contacts</button>
       </form>
     </div>
   </footer>

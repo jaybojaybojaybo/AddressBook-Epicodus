@@ -39,5 +39,15 @@ namespace AddressBook.Controllers
       Contact newContact = Contact.Find(id);
       return View(newContact);
     }
+
+    [HttpPost("/remove/{id}")]
+    public ActionResult RemoveContact(int id)
+    {
+      Contact deletedContact = Contact.Find(id);
+      int deletedId = id - 1;
+      deletedContact.ClearContact(deletedId);
+      List<Contact> allContacts = Contact.GetAll();
+      return View("~/Views/Home/Index.cshtml", allContacts);
+    }
   }
 }
