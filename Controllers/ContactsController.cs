@@ -17,7 +17,8 @@ namespace AddressBook.Controllers
     [HttpGet("/contacts/new")]
     public ActionResult CreateForm()
     {
-      return View();
+      List<Contact> allContacts = Contact.GetAll();
+      return View(allContacts);
     }
 
     [HttpPost("/contacts")]

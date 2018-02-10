@@ -1,14 +1,60 @@
-<h1>Add a Contact</h1>
-<form action="/contacts" method="post">
-  <label for="contactName">Name: </label>
-  <input id="contactName" name="contactName" type="text">
+@{
+  Layout = "_Layout";
+}
+<div class="container w3-display-topmiddle">
 
-  <label for="contactPhone">Phone Number: </label>
-  <input id="contactPhone" name="contactPhone" type="text">
+  <header class="jumbotron jumbotron-fluid w3-teal">
+    <div class="container">
+      <h1 class="display-3 w3-middle" align="center"><a href="/">Address Book</a></h1>
+    </div>
+  </header>
+  <br>
+  <div class="w3-container w3-center">
+    <h1>Add a Contact</h1>
+    <form action="/contacts" method="post">
+      <div class="w3-row">
+        <div class="inner">
+          <div class="w3-third w3-container" align="right">
+            <label for="contactName">Name: </label>
+          </div>
+          <div class="w3-twothird w3-container" align="left">
+            <input id="contactName" name="contactName" type="text">
+          </div>
+        </div>
+        <div class="inner">
+          <div class="w3-third w3-container" align="right">
+            <label for="contactPhone">Phone Number: </label>
+          </div>
+          <div class="w3-twothird w3-container" align="left">
+            <input id="contactPhone" name="contactPhone" type="text">
+          </div>
+        </div>
+        <div class="inner">
+          <div class="w3-third w3-container" align="right">
+            <label for="contactAddress">Address: </label>
+          </div>
+          <div class="w3-twothird w3-container" align="left">
+            <input id="contactAddress" name="contactAddress" type="text">
+          </div>
+        </div>
+      </div>
+      <br>
+      <button class="inner" type="submit">Add New Contact</button>
+    </form>
+    <br>
+  </div>
+  <br>
+  <footer class="w3-container w3-center w3-padding-large">
+    <div class="inner">
+      <h3><a href="/">Back to All Contacts</a></h3>
 
-  <label for="contactAddress">Address: </label>
-  <input id="contactAddress" name="contactAddress" type="text">
+      @if (@Model.Count > 0)
+      {
+        <form action="/contacts/List/Clear" method="post">
+          <button type="submt" name="button">Clear All Contacts</button>
+        </form>
+      }
+    </div>
+  </footer>
 
-  <button type="submit">Add New Contact</button>
-</form>
-<p><a href="/">Back to All Contacts</a></p>
+</div>

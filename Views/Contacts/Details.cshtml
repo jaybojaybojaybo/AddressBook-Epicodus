@@ -1,8 +1,42 @@
-<h3>Here is @Model.GetName()'s contact information:</h3>
-<ul>
-  <li>Phone Number: @Model.GetPhone()</li>
-  <li>Address: @Model.GetAddress()</li>
-</ul>
-
-<p><a href="/">Back to All Contacts</a></p>
-<p><a href="/contacts/new">Add a new Contact</a></p>
+@{
+  Layout = "_Layout";
+}
+<div class="container w3-display-topmiddle">
+  <header class="jumbotron jumbotron-fluid w3-teal">
+    <div class="container">
+      <h1 class="display-3 w3-middle" align="center"><a href="/">Address Book</a></h1>
+    </div>
+  </header>
+  <br>
+  <div class="w3-container w3-center">
+    <h3>@Model.GetName()'s Deets:</h3>
+    <div class="w3-row">
+      <div class="inner">
+        <div class="w3-half w3-container" align="right">
+          <p>Phone Number: </p>
+        </div>
+        <div class="w3-half w3-container" align="left">
+          <p>@Model.GetPhone()</p>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="w3-half w3-container" align="right">
+          <p>Address: </p>
+        </div>
+        <div class="w3-half w3-container" align="left">
+          <p>@Model.GetAddress()</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <footer class="w3-container w3-center w3-padding-large">
+    <div class="inner">
+      <h3><a href="/">Back to All Contacts</a></h3>
+      <h3><a href="/contacts/new">Add a new Contact</a></h3>
+      <form action="/contacts/List/Clear" method="post">
+        <button type="submt" name="button">Clear All Contacts</button>
+      </form>
+    </div>
+  </footer>
+</div>
